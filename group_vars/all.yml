@@ -1,0 +1,30 @@
+---
+# Common settings
+common_timezone: "Asia/Dubai"
+common_base_packages:
+  - curl
+  - git
+  - htop
+  - vim
+  - unzip
+  - ca-certificates
+  - fail2ban
+
+# Admin user (put your real public key here or pass it with -e)
+users_admin_user: deploy
+users_admin_ssh_public_key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIExampleKeyReplaceMe deploy@example"
+
+# SSH hardening
+ssh_hardening_port: 22
+ssh_hardening_allow_users:
+  - "{{ users_admin_user }}"
+
+# Firewall: ports open to the world
+firewall_allowed_tcp_ports:
+  - "{{ ssh_hardening_port }}"
+  - 80
+  - 443
+
+# Nginx
+nginx_server_name: "_"
+nginx_site_title: "Provisioned with Ansible"
