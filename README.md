@@ -64,5 +64,5 @@ ansible-playbook site.yml --tags ssh,firewall
 
 ## Author
 
-**Ahmed Elgamil**, Junior DevOps & Cloud Engineer
+**Ahmed Elgamil**, DevOps & Cloud Engineer
 [LinkedIn](https://linkedin.com/in/ahmed-elgamil-devops) · [GitHub](https://github.com/ahmed-elgamil-devops)
